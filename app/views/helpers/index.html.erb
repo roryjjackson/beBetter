@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Helpers</h1>
+
+<div id="helpers">
+  <% @helpers.each do |helper| %>
+    <%= render helper %>
+    <p>
+      <%= link_to "Show this helper", helper %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New helper", new_helper_path if policy(Helper).new? %>
