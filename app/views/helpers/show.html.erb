@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @helper %>
+
+<div>
+  <% if policy(@helper).edit? %>
+    <%= link_to "Edit this helper", edit_helper_path(@helper) %> |
+  <% end %>
+  <%= link_to "Back to helpers", helpers_path %>
+
+  <%= button_to "Destroy this helper", @helper, method: :delete if policy(@helper).destroy? %>
+</div>
